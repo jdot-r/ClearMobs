@@ -13,8 +13,8 @@ class ClearMobs extends PluginBase {
   public function onEnable() {
     $this->getLogger()->notice(TF::GREEN."Enabled!");
   }
-  public function onCommand(CommandSender $sender, Command $command, $list, array $args) {
-    if(strtolower($command) === "clearmobs") {
+  public function onCommand(CommandSender $s, Command $cmd, $list, array $args) {
+    if(strtolower($cmd) === "cm") {
       //
     }
   }
