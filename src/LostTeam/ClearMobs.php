@@ -10,7 +10,7 @@ use pocketmine\Player;
 
 
 class ClearMobs extends PluginBase {
-  public function $Title = (TF::BLUE."[".TF::GREEN."".TF::BLUE."]".TF::YELLOW." ");
+  public function $Title = (TF::BLUE."[".TF::GREEN."ClearMobs".TF::BLUE."]".TF::YELLOW." ");
   public function onEnable() {
     $this->getLogger()->notice(TF::GREEN."Enabled!");
   }
