@@ -42,7 +42,7 @@ class ClearMobs extends PluginBase {
     $i = 0;
     foreach($this->getServer()->getLevels() as $level) {
       foreach($level->getEntities() as $entity) {
-        if(!$entity instanceof Player or !$entity instanceof Item) {
+        if(!$entity instanceof Player and !$entity instanceof Item) {
           $entity->close();
           $i++;
         }
