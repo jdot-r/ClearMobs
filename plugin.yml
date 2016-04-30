@@ -22,7 +22,7 @@ commands:
     permission: clearall.cmd
     description: "Clears All Entities but Players"
 permissions:
-  clearmobs.cmd
+  clearmobs.cmd:
     default: op
     description: "Parent permission for clearmobs command"
   clearall.cmd:
