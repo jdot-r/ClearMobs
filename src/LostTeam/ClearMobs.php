@@ -51,6 +51,6 @@ class ClearMobs extends PluginBase {
     return $i;
   }
   public function onDisable() {
-    $this->getLogger()->notice(YF::GREEN."Disabled!");
+    $this->getLogger()->notice(TF::GREEN."Disabled!");
   }
 }
