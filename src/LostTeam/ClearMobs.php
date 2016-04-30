@@ -5,12 +5,12 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as TF;
-use pocketmine\entity\DroppedItem;
+use pocketmine\entity\Item;
 use pocketmine\Player;
 
 
 class ClearMobs extends PluginBase {
-  public function $Title = (TF::BLUE."[".TF::GREEN."ClearMobs".TF::BLUE."]".TF::YELLOW." ");
+  public $Title = (TF::BLUE."[".TF::GREEN."ClearMobs".TF::BLUE."]".TF::YELLOW." ");
   public function onEnable() {
     $this->getLogger()->notice(TF::GREEN."Enabled!");
   }
@@ -42,7 +42,7 @@ class ClearMobs extends PluginBase {
     $i = 0;
     foreach($this->getServer()->getLevels() as $level) {
       foreach($level->getEntities() as $entity) {
-        if(!$entity instanceof Player or !$entity instanceof DroppedItem) {
+        if(!$entity instanceof Player or !$entity instanceof Item) {
           $entity->close();
           $i++;
         }
