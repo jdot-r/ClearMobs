@@ -1,0 +1,30 @@
+name: ClearMobs
+author: "jasonwynn10"
+version: 1.0.0
+api: [2.0.0, 1.13.1]
+main: LostTeam\ClearMobs
+description: "Remove the mobs from you're world!"
+commands:
+  cm:
+    usage: "/cm"
+    permission: clearmobs.cmd 
+    description: "Clears All Mobs"
+  ca:
+    usage: "/ca"
+    permission: clearall.cmd
+    description: "Clears All Entities but Players"
+  clearmobs:
+    usage: "/clearmobs"
+    permission: clearmobs.cmd
+    description: "Clears All Mobs"
+  clearall:
+    usage: "/clearall"
+    permission: clearall.cmd
+    description: "Clears All Entities but Players"
+permissions:
+  clearmobs.cmd
+    default: op
+    description: "Parent permission for clearmobs command"
+  clearall.cmd:
+    default: op
+    description: "Parent permission for clearall command"
