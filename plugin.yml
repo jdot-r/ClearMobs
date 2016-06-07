@@ -1,30 +1,18 @@
-name: ClearMobs
-author: "jasonwynn10"
-version: 1.0.0
+name: LostHunter
+author: "LostTeam"
+version: 1.1.0
 api: [2.0.0, 1.13.1]
-main: LostTeam\ClearMobs
-description: "Remove the mobs from you're world!"
+main: LostTeam\LostHunter
+description: "Hunt the entities in your world until their all extinct!"
 commands:
-  cm:
-    usage: "/cm"
-    permission: clearmobs.cmd 
-    description: "Clears All Mobs"
-  ca:
-    usage: "/ca"
-    permission: clearall.cmd
-    description: "Clears All Entities but Players"
-  clearmobs:
-    usage: "/clearmobs"
-    permission: clearmobs.cmd
-    description: "Clears All Mobs"
-  clearall:
-    usage: "/clearall"
-    permission: clearall.cmd
-    description: "Clears All Entities but Players"
+  h:
+    usage: "/h"
+    permission: hunt.cmd
+    description: "Hunts All Entities but Players within loaded chunks"
+  hunt:
+    usage: "/hunt"
+    permission: hunt.cmd
+    description: "Hunts All Entities but Players within loaded chunks"
 permissions:
-  clearmobs.cmd:
+  hunt.cmd:
     default: op
-    description: "Parent permission for clearmobs command"
-  clearall.cmd:
-    default: op
-    description: "Parent permission for clearall command"
