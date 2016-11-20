@@ -13,7 +13,7 @@ class LostHunter extends PluginBase {
     $this->getLogger()->notice(TF::GREEN."Enabled!");
   }
   public function onCommand(CommandSender $sender, Command $command, $list, array $args) {
-    if(strtolower($command) === "h" or strtolower($command) === "hunt") {
+    if(strtolower($command) === "h" || strtolower($command) === "hunt") {
       $Count = $this->removeEntities();
       $sender->sendMessage($this->Title."Removed ".$Count." entities!");
       return true;
@@ -26,6 +26,8 @@ class LostHunter extends PluginBase {
       foreach($level->getEntities() as $entity) {
         if(!$entity instanceof Player) {
           $entity->close();
+          $entity->kill();
+          $entity->despawnFromAll();
           $i++;
         }
       }
